@@ -14,8 +14,8 @@ import CombineControl
 
 var cancellables = Set<AnyCancellable>()
 
-button.tap.sink {
-    // triggered when button tapped
+control.tap.sink {
+    // triggered when control tapped
 }
 .store(in: &cancellables)
 
@@ -26,7 +26,6 @@ textField.textPublisher.sink { text in
 ```
 
 ## Publishers list
-#### UIButton
 ```swift
 /// Publisher that emits whenever the
 /// `touchUpInside` event trigger.

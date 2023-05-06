@@ -17,6 +17,14 @@ public extension UIControlPublishers {
             .eraseToAnyPublisher()
     }
 
+    /// Publisher that emits whenever the
+    /// `touchUpInside` event trigger.
+    var tap: AnyPublisher<Void, Never> {
+        publisher(for: .touchUpInside)
+            .map { _ in }
+            .eraseToAnyPublisher()
+    }
+
     /// Publisher that emits `self` whenever
     /// the `touchDown` event trigger.
     var touchDown: AnyPublisher<Self, Never> {
